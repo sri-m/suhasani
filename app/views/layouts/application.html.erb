@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Ravi</title>
+  <%#= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= stylesheet_link_tag 'application' %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+<div id="body-margin">
+<!-- header -->
+<%= render :partial => "courses/header1" %>
+<!-- menu -->
+<%= render partial: "courses/menu" %>
+  <div id="container">
+<!-- bgimage-->
+<%= render partial: "courses/bgimage" %>
+    <div id="content">
+<!-- sidecontent -->
+<%= render partial: "courses/sidecontent" %>
+      <div id="maincontent">
+        <div id="mainleft">
+        	<%= yield %>
+        </div>
+<!-- mainright -->
+<%= render partial: "courses/mainright" %>
+      </div>
+    </div>
+  </div>
+<!-- footer -->
+<%= render partial: "courses/footer" %>
+</div>
+</body>
+</html>
